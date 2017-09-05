@@ -227,6 +227,20 @@ public abstract class AbstractMarkupDocBuilder implements MarkupDocBuilder {
         return listingBlock(replaceNewLines(text), null);
     }
 
+    protected void delimitedBlockText(Markup begin, String text, Markup end, boolean skipLeadNewLine) {
+        Validate.notBlank(text, "text must not be blank");
+        if (!StringUtils.isBlank(begin.toString()))
+            documentBuilder.append(begin);
+        if (skipLeadNewLine == false)
+            documentBuilder.append(newLine);
+
+        documentBuilder.append(replaceNewLines(text)).append(newLine);
+        if (!StringUtils.isBlank(end.toString()))
+            documentBuilder.append(end).append(newLine);
+        documentBuilder.append(newLine);
+
+    }
+
     protected void delimitedBlockText(Markup begin, String text, Markup end) {
         Validate.notBlank(text, "text must not be blank");
         if (!StringUtils.isBlank(begin.toString()))
