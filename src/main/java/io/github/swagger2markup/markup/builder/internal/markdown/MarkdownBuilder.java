@@ -122,18 +122,19 @@ public class MarkdownBuilder extends AbstractMarkupDocBuilder {
         if (admonition != null || title != null)
             documentBuilder.append(" : ").append(newLine);
 
-        delimitedBlockText(new Markup() {
+        Markup m = new Markup() {
             public String toString() {
                 return BLOCK_STYLE.get(style);
             }
-        }, text);
+        };
+        delimitedBlockText(m, text, m, true);
         return this;
     }
 
     @Override
     public MarkupDocBuilder listingBlock(String text, String language) {
         if (language != null)
-            text = language + " :" + newLine + text;
+            text = language + newLine + text;
         block(text, MarkupBlockStyle.LISTING);
         return this;
     }
