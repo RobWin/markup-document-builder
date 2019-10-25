@@ -4,11 +4,11 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'org.asciidoctor', name: 'asciidoctor-gradle-plugin', version: '1.5.3'
-        classpath group: 'org.asciidoctor', name: 'asciidoctorj-pdf', version: '1.5.0-alpha.11'
-        classpath group: 'org.kt3k.gradle.plugin', name: 'coveralls-gradle-plugin', version: '2.0.1'
-        classpath group: 'com.jfrog.bintray.gradle', name: 'gradle-bintray-plugin', version: '1.6'
-        classpath group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '4.0.0'
+        classpath group: 'org.asciidoctor', name: 'asciidoctor-gradle-plugin', version: '1.6.1'
+        classpath group: 'org.asciidoctor', name: 'asciidoctorj-pdf', version: '1.5.0-beta.6'
+        classpath group: 'org.kt3k.gradle.plugin', name: 'coveralls-gradle-plugin', version: '2.8.3'
+        classpath group: 'com.jfrog.bintray.gradle', name: 'gradle-bintray-plugin', version: '1.8.4'
+        classpath group: 'org.jfrog.buildinfo', name: 'build-info-extractor-gradle', version: '4.10.0'
     }
 }
 
@@ -37,15 +37,16 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.18'
-    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.4'
-    implementation group: 'commons-io', name: 'commons-io', version: '2.4'
-    implementation group: 'commons-codec', name: 'commons-codec', version: '1.10'
-    implementation group: 'nl.jworks.markdown_to_asciidoc', name: 'markdown_to_asciidoc', version: '1.0'
-    testImplementation group: 'junit', name: 'junit', version: '4.11'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.28'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    implementation group: 'commons-codec', name: 'commons-codec', version: '1.13'
+    implementation group: 'nl.jworks.markdown_to_asciidoc', name: 'markdown_to_asciidoc', version: '1.1'
+    implementation group: 'org.pegdown', name: 'pegdown', version: '1.6.0'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
     testImplementation group: 'io.github.robwin', name: 'assertj-diff', version: '0.1.1'
-    testImplementation group: 'org.mockito', name: 'mockito-core', version: '1.9.5'
-    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.1.6'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.1.0'
+    testImplementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
     testImplementation group: 'io.github.robwin', name: 'assertj-diff', version: '0.1.1'
 }
 
